@@ -1,10 +1,10 @@
-const mailer = require('../../mailer');
+const mailer = require("../../mailer");
 
-const createEmail =(Email,FirstName,LastName,Phone,Notes)=>{
-return(mailer.sendMail(
+const createEmail = (Email, FirstName, LastName, Phone, Notes) => {
+  return mailer.sendMail(
     {
       from: "andre.macedo@we-code.pt",
-      to: 'asilvamacedo@gmail.com',
+      to: "asilvamacedo@gmail.com",
       subject: "Novo Contacto Fielmetodo",
       text: `De: ${FirstName} ${LastName} <${Email}>
       Contacto: ${Phone}
@@ -15,8 +15,8 @@ return(mailer.sendMail(
       if (err) console.error(err);
       else console.log(info);
     }
-  ))
-}
-module.exports={
-    createEmail
-}
+  );
+};
+module.exports = {
+  createEmail,
+};
