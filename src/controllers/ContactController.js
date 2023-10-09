@@ -1,7 +1,6 @@
 const ContactModel = require("../models/ContactModel");
 
 const EmitContact = (req, res) => {
-  console.log(req.body, "req.body");
   const { Email, FirstName, LastName, Phone, Notes } = req.body;
   if (req.body !== undefined) {
     ContactModel.createEmail(Email, FirstName, LastName, Phone, Notes)
