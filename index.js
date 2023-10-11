@@ -8,7 +8,8 @@ const app = express();
 app.use(
   cors({
     methods: "GET,POST,PATCH,DELETE,OPTIONS",
-    optionsSuccessStatus: 200,	
+    origin: "https://fielmetodo.pt/",
+    optionsSuccessStatus: 200,
   })
 );
 
