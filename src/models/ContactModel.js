@@ -7,9 +7,9 @@ const createEmail = (Email, FirstName, LastName, Phone, Notes) => {
       to: "asilvamacedo@gmail.com",
       subject: "Novo Contacto Fielmetodo",
       text: `De: ${FirstName} ${LastName} <${Email}>
-      Contacto: ${Phone}
+      Contacto: ${Phone?Phone:"Número não fornecido."}
       Mensagem: ${Notes}`,
-      html: `<p>De: ${FirstName} ${LastName} &lt;${Email}&gt; <br /> Contacto: ${Phone} <br /> Mensagem: ${Notes}`,
+      html: `<p>De: ${FirstName} ${LastName} &lt;${Email}&gt; <br /> Contacto: ${Phone?Phone:"<i>Número não fornecido.</i>"} <br /> Mensagem: ${Notes}`,
     },
     (err, info) => {
       if (err) console.error(err);
