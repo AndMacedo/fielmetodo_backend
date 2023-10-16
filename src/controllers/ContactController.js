@@ -1,14 +1,10 @@
-const ContactModel = require("../models/ContactModel");
+const ContactModel = require("../models/ContactModel.js");
 
 const EmitContact = (req, res) => {
   const { Email, FirstName, LastName, Phone, Notes } = req.body;
   if (req.body !== undefined) {
     ContactModel.createEmail(Email, FirstName, LastName, Phone, Notes)
-      .then(res.status(201).send(res.data))
-      .catch((err) => {
-        console.error(err);
-        res.sendStatus(500);
-      });
+      res.sendStatus(200)      
   } else {
     console.error(res);
   }
