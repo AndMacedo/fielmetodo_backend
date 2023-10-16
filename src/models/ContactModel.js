@@ -1,4 +1,4 @@
-const mailer = require("../../mailer");
+const mailer = require("../helpers/mailer");
 
 const createEmail = (Email, FirstName, LastName, Phone, Notes) => {
   return mailer.sendMail(
