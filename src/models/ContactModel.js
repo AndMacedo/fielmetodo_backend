@@ -3,7 +3,7 @@ const mailer = require("../helpers/mailer");
 const createEmail = (Email, FirstName, LastName, Phone, Notes) => {
   return mailer.sendMail(
     {
-      from: "andre.macedo@we-code.pt",
+      from: "asilvamacedo@gmail.com",
       to: "asilvamacedo@gmail.com",
       subject: "Novo Contacto Fielmetodo",
       text: `De: ${FirstName} ${LastName} <${Email}>
